@@ -6,7 +6,7 @@ import { Navigate } from "react-router";
 import { useNavigate } from "react-router-dom";
 import googlepic from './images/google.png'
 import facebookepic from './images/facebook.png'
-import githubpic from './images/google.png'
+import githubpic from './images/github.png'
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -110,11 +110,11 @@ const Login = () => {
               >
                 submit
               </button>
-            </div> <hr />
-            <div>
+            </div> or..
+            <div id="buttons">
               <button onClick={handleGooglesubmit}><img src={googlepic}  className="googleimg" /></button>
               <button onClick={handleFacebooksubmit}> <img src={facebookepic}  className="googleimg" /></button>
-              <button onClick={handleGithubsubmit}><img src={googlepic}  className="googleimg" /></button>
+              <button onClick={handleGithubsubmit}><img src={githubpic} className="googleimg" alt="" /></button>
             </div>
           </section>
         </form>

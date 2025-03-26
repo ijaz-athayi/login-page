@@ -67,6 +67,12 @@ a {
   width: 20px;
   height: 20px;
 }
+#buttons{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
 /* #loginback{
         display: flex;
         flex-direction: column;
