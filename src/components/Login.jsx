@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./css/login.css";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { auth, githubProvider, googleProvider, facebookProvider } from "../firebaseconfig";
-import { Navigate } from "react-router";
 import { useNavigate } from "react-router-dom";
-import googlepic from './images/google.png'
-import facebookepic from './images/facebook.png'
-import githubpic from './images/github.png'
+
+import {
+  auth,
+  githubProvider,
+  googleProvider,
+  facebookProvider,
+} from "../firebaseconfig";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -36,38 +38,10 @@ const Login = () => {
     console.log(email);
     console.log(password);
   };
-
-  const handleGooglesubmit = async (e) => {
+  const handleothersigns = (e) =>{
     e.preventDefault();
-    try {
-      await signInWithPopup(auth, googleProvider);
-      console.log("user signed with google");
-      navigate("/home");
-    } catch (error) {
-      console.log("Error signing in with google:", error);
-    }
-  };
-  const handleFacebooksubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithPopup(auth, facebookProvider);
-      console.log("user signed with facebook");
-      navigate("/home");
-    } catch (error) {
-      console.log("Error signing in with facebook:", error);
-    }
-  };
-  const handleGithubsubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithPopup(auth, githubProvider);
-      console.log("user signed with github");
-      navigate("/home");
-    } catch (error) {
-      console.log("Error signing in with github:", error);
-    }
-  };
-
+    navigate("/signin");
+  }
   return (
     <div id="login-body">
       <div id="formback">
@@ -101,7 +75,6 @@ const Login = () => {
             not a user! <a href="/signup">signup</a>
           </section>
           <section id="sectfour" className="sect">
-            {/* <input type="submit" id='submitbut' onClick={} /> */}
             <div>
               <button
                 className="submitbut"
@@ -110,12 +83,9 @@ const Login = () => {
               >
                 submit
               </button>
-            </div> or..
-            <div id="buttons">
-              <button onClick={handleGooglesubmit}><img src={googlepic}  className="googleimg" /></button>
-              <button onClick={handleFacebooksubmit}> <img src={facebookepic}  className="googleimg" /></button>
-              <button onClick={handleGithubsubmit}><img src={githubpic} className="googleimg" alt="" /></button>
-            </div>
+            </div>{" "}
+            or..
+            <button onClick={handleothersigns}>sign in with other platforms</button>
           </section>
         </form>
       </div>
