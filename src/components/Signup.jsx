@@ -8,12 +8,12 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); // Fixed initialization
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const closethis = () => {
-    window.location.href = "/"; // Redirect to home page when close button is clicked
+    window.location.href = "/";
   };
 
   const shandlesubmit = async (e) => {
@@ -35,11 +35,11 @@ const Signup = () => {
       setErrors({ confirmPassword: "Passwords do not match" });
       return;
     }
-
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(userCredential.user, { displayName: name }); // Save the user's name
       console.log("User created successfully!");
+      document.getElementById("logedornot").innerHTML = "User created successfully!";
       navigate("/home");
     } catch (error) {
       console.error("Error creating user:", error.message);
@@ -49,6 +49,9 @@ const Signup = () => {
 
   return (
     <div id="signupbody">
+      <div id="logedornot">
+        <p></p>
+      </div>
       <div id="signupcontent">
         <form onSubmit={shandlesubmit}>
           <div id="shrinked">

@@ -44,10 +44,23 @@ a {
   padding-right: 15px;
   text-align: center;
 }
-#submitbut {
+.submitbut {
   width: 70px;
   height: 30px;
   font-size: 18px;
+  background-color: transparent;
+  border: 0 ;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.submitbut:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: color 0.9s ease-in-out;
+  transition: background-color 0.9s ease-in-out;
 }
 .inputs::placeholder {
   text-align: center;
@@ -63,16 +76,29 @@ a {
   align-items: center;
   text-align: center;
 }
-.googleimg{
-  width: 20px;
-  height: 20px;
-}
-#buttons{
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
 
+
+#othersi{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+  background: transparent;
+  /* linear-gradient(to right, black, white) */
+  border: 0;
 }
+#othersi:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: color 0.9s ease-in-out;
+  transition: background-color 0.9s ease-in-out;
+  border-radius: 16px;
+}
+
 /* #loginback{
         display: flex;
         flex-direction: column;

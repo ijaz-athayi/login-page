@@ -85,7 +85,7 @@ const Login = () => {
               </button>
             </div>{" "}
             or..
-            <button onClick={handleothersigns}>sign in with other platforms</button>
+            <button onClick={handleothersigns} id="othersi">sign in with other platforms</button>
           </section>
         </form>
       </div>

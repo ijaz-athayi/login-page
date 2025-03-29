@@ -51,19 +51,22 @@ const Othersignin = () => {
     <div id="othersigninbody">
       <div id="othersignindiv">
         <button onClick={closethis} id="closebut">X</button>
-        <div>
+        <div id="descript">
           <h2>Other Sign In Methods</h2>
           <p>Sign in with your social media accounts:</p>
         </div>
         <div id="buttons">
           <button onClick={handleGooglesubmit}>
-            <img src={googlepic} className="googleimg" alt="Google" />
+            <img src={googlepic} className="googleimg" alt="Google" /> 
+            Google
           </button>
           <button onClick={handleFacebooksubmit}>
             <img src={facebookepic} className="googleimg" alt="Facebook" />
+            Facebook
           </button>
           <button onClick={handleGithubsubmit}>
             <img src={githubpic} className="googleimg" alt="GitHub" />
+            GitHub
           </button>
         </div>
       </div>

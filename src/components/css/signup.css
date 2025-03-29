@@ -70,22 +70,21 @@ a{
     top: 15px;
   }
   #overlogin{
+    height: 320px;
     display: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
-  #shrinked:hover{
-    height: 500px;
+  #shrinked{
+    height: 450px;
     width: 300px;
   }
-  #shrinked:hover > #overlogin{
+ #overlogin{
     display: flex;
   }
-  #shrinked:hover > #sclosebut{
-    display: block;
-  }
+
   .inp{
     width: 80%;
     height: 30px;
@@ -103,7 +102,7 @@ a{
     height: 50px;
     background-color: transparent;
     border: 0;
-    display: none;
+    display: block;
 }
 .serror{
   color: red;
